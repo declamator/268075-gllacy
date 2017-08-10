@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Дмитрий Буян](https://up.htmlacademy.ru/htmlcss/18/user/268075).
-* Наставник: `Неизвестно`.
+* Наставник: [Максим Фарига](https://htmlacademy.ru/profile/maximfariga).
 
 ---
 
