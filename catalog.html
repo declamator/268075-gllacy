@@ -3,12 +3,13 @@
  	<head>
     <meta charset="utf-8">
     <title>HTML Academy: каталог мороженого магазина Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <div class="content-wrapper">
       <header class="main-header">
         <div class="logo">
-          <a href="index.html"><img src="http://placehold.it/150x100" alt="Логотип магазина Глейси" width="154" height="64"></a>
+          <a href="index.html"><img src="img/logo.svg" alt="Логотип магазина Глейси" width="154" height="64"></a>
         </div>
         <nav class="main-navigation">
           <h2 class="visually-hidden">Главная навигация страницы</h2>
@@ -16,7 +17,7 @@
             <li>
               <a class="active" href="catalog.html">Каталог</a>
               <ul>
-                <li>Новинки</li>
+                <li><a href="#new">Новинки</a></li>
                 <li><a href="#">Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
@@ -62,14 +63,14 @@
                 <table class="cart">
                   <tr class="cart__item">
                     <td><button class="remove-from-cart" type="button" title="Удалить из корзины">Удалить</button></td>
-                    <td class="cart-item__icon"><img src="http://placehold.it/50x50" alt="Пломбир с апельсиновым джемом"></td>
+                    <td class="cart-item__icon"><img src="img/ice-cream-small-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                     <td class="cart-item__title">Пломбир с апельсиновым джемом</td>
                     <td><span class="cart-item__weight">1,5</span> кг &#xD7; <span class="cart-item__price">200</span> руб.</td>
                     <td class="total-price"><span>300</span> руб.</td>
                   </tr>
                   <tr class="cart__item">
                     <td><button class="remove-from-cart" type="button" title="Удалить из корзины">Удалить</button></td>
-                    <td class="cart-item_icon"><img src="http://placehold.it/50x50" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                    <td class="cart-item_icon"><img src="img/ice-cream-small-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
                     <td class="cart-item__title">Клубничный пломбир с присыпкой из белого шоколада</td>
                     <td><span class="cart-item__weight">1,5</span> кг &#xD7; <span class="cart-item__price">300</span> руб.</td>
                     <td class="total-price"><span>450</span> руб.</td>
@@ -93,7 +94,7 @@
           <li><a class="active">Сливочное</a></li>
         </ol>
         <section class="catalog">
-          <h2>Сливочное мороженое</h2>
+          <h2 class="catalog__title">Сливочное мороженое</h2>
           <section class="catalog-filter">
             <h3 class="visually-hidden">Фильтры</h3>
             <form action="#echo" method="get">
@@ -160,7 +161,7 @@
           <section class="catalog-sorted">
             <h3 class="visually-hidden">Отфильтрованные позиции</h3>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+              <a href="#"><img src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
               <div class="popular-item__price">
                 <b>310 &#8381;</b><span> /кг</span>
               </div>
@@ -168,7 +169,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада"></a>
+              <a href="#"><img src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
               <div class="popular-item__price">
                 <b>380 &#8381;</b><span> /кг</span>
               </div>
@@ -176,7 +177,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
+              <a href="#"><img src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
               <div class="popular-item__price">
                 <b>355 &#8381;</b><span> /кг</span>
               </div>
@@ -184,7 +185,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой"></a>
+              <a href="#"><img src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
               <div class="popular-item__price">
                 <b>415 &#8381;</b><span> /кг</span>
               </div>
@@ -192,7 +193,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное с брусничным джемом"></a>
+              <a href="#"><img src="img/ice-cream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом"></a>
               <div class="popular-item__price">
                 <b>325 &#8381;</b><span> /кг</span>
               </div>
@@ -200,7 +201,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-черничное с цельными ягодами черники"></a>
+              <a href="#"><img src="img/ice-cream-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники"></a>
               <div class="popular-item__price">
                 <b>410 &#8381;</b><span> /кг</span>
               </div>
@@ -208,7 +209,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-лимонное с карамельной присыпкой"></a>
+              <a href="#"><img src="img/ice-cream-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой"></a>
               <div class="popular-item__price">
                 <b>375 &#8381;</b><span> /кг</span>
               </div>
@@ -216,7 +217,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное с шоколадной стружкой"></a>
+              <a href="#"><img src="img/ice-cream-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой"></a>
               <div class="popular-item__price">
                 <b>320 &#8381;</b><span> /кг</span>
               </div>
@@ -224,7 +225,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-ванильное с кусочками шоколада"></a>
+              <a href="#"><img src="img/ice-cream-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада"></a>
               <div class="popular-item__price">
                 <b>440 &#8381;</b><span> /кг</span>
               </div>
@@ -232,7 +233,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочноe с ментоловым сиропом"></a>
+              <a href="#"><img src="img/ice-cream-10.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом"></a>
               <div class="popular-item__price">
                 <b>435 &#8381;</b><span> /кг</span>
               </div>
@@ -240,7 +241,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное с кусочками черного шоколада"></a>
+              <a href="#"><img src="img/ice-cream-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада"></a>
               <div class="popular-item__price">
                 <b>355 &#8381;</b><span> /кг</span>
               </div>
@@ -248,7 +249,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное с мятным сиропом"></a>
+              <a href="#"><img src="img/ice-cream-12.png" width="267" height="267" alt="Сливочное с мятным сиропом"></a>
               <div class="popular-item__price">
                 <b>420 &#8381;</b><span> /кг</span>
               </div>
@@ -287,7 +288,7 @@
           </ul>
         </nav>
         <div class="copyright">
-          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/150x100" alt="Сделано в HTML Academy"></a>
+          <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Сделано в HTML Academy"></a>
           <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
         </div>
       </footer>

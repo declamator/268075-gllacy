@@ -3,6 +3,7 @@
  	<head>
     <meta charset="utf-8">
     <title>HTML Academy: главная страница магазина Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <input id="btn-1" name="toggle" type="radio" checked>
@@ -13,7 +14,7 @@
       <div class="content-wrapper">
         <header class="main-header">
           <div class="logo">
-            <img src="http://placehold.it/150x100" alt="Логотип магазина Глейси" width="154" height="64">
+            <img src="img/logo.svg" alt="Логотип магазина Глейси" width="154" height="64">
           </div>
           <nav class="main-navigation">
             <h2 class="visually-hidden">Главная навигация страницы</h2>
@@ -74,16 +75,16 @@
         </header>
         <div class="slider">
           <h2 class="visually-hidden">Промо-акции</h2>
-          <div class="slider slide-1">
-            <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+          <div class="slide slide-1">
+            <h3 class="slide__title">Крем-брюле и пломбир с малиновым джемом</h3>
             <a href="#" class="btn">Давайте оба</a>
           </div>
-          <div class="slider slide-2">
-            <h3>Шоколадный пломбир и лимонный сорбет</h3>
+          <div class="slide slide-2">
+            <h3 class="slide__title">Шоколадный пломбир и лимонный сорбет</h3>
             <a href="#" class="btn">Давайте оба</a>
           </div>
-          <div class="slider slide-3">
-            <h3>Пломбир с помадкой и клубничный щербет</h3>
+          <div class="slide slide-3">
+            <h3 class="slide__title">Пломбир с помадкой и клубничный щербет</h3>
             <a href="#" class="btn">Давайте оба</a>
           </div>
           <div class="slider-controls">
@@ -96,13 +97,13 @@
           <h1 class="visually-hidden">Магазин Глейси - магазин по продаже мороженого собственного производства</h1>
           <section class="banner">
             <h2 class="visually-hidden">Специальные предложения</h2>
-            <div class="special offer-1">
-              <h3>Малинка даром!</h3>
+            <div class="stock stock-1">
+              <h3 class="stock__title">Малинка даром!</h3>
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
               <a href="#">Хочу варенье!</a>
             </div>
-            <div class="special offer-2">
-              <h3>Шоколадки даром!</h3>
+            <div class="stock stock-2">
+              <h3 class="stock__title">Шоколадки даром!</h3>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
               <a href="#">Хочу шоколадки!</a>
             </div>
@@ -111,7 +112,7 @@
           <section class="popular">
             <h2 class="visually-hidden">Хиты продаж</h2>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
+              <a href="#"><img src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
               <div class="popular-item__price">
                 <b>310 &#8381;</b><span> /кг</span>
               </div>
@@ -119,7 +120,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-кофейное с кусочками шоколада"></a>
+              <a href="#"><img src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
               <div class="popular-item__price">
                 <b>380 &#8381;</b><span> /кг</span>
               </div>
@@ -127,7 +128,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
+              <a href="#"><img src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
               <div class="popular-item__price">
                 <b>355 &#8381;</b><span> /кг</span>
               </div>
@@ -135,7 +136,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
-              <a href="#"><img src="http://placehold.it/150x100" alt="Сливочное крем-брюле с карамельной подливкой"></a>
+              <a href="#"><img src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
               <div class="popular-item__price">
                 <b>415 &#8381;</b><span> /кг</span>
               </div>
@@ -210,7 +211,7 @@
             </ul>
           </nav>
           <div class="copyright">
-            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/150x100" alt="Сделано в HTML Academy"></a>
+            <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Сделано в HTML Academy"></a>
             <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
           </div>
         </footer>
