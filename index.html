@@ -19,14 +19,14 @@
           <nav class="main-navigation">
             <h2 class="visually-hidden">Главная навигация страницы</h2>
             <ul class="site-menu">
-              <li class="site-menu-item">
-                <a href="catalog.html">Каталог</a>
+              <li class="site-menu__item">
+                <a href="#">Каталог</a>
                 <ul class="submenu">
-                  <li><a href="#new">Новинки</a></li>
-                  <li><a href="catalog.html">Сливочное</a></li>
-                  <li><a href="#">Щербеты</a></li>
-                  <li><a href="#">Фруктовый лед</a></li>
-                  <li><a href="#">Мелорин</a></li>
+                  <li class="submenu__item"><a href="#new">Новинки</a></li>
+                  <li class="submenu__item"><a href="catalog.html">Сливочное</a></li>
+                  <li class="submenu__item"><a href="#">Щербеты</a></li>
+                  <li class="submenu__item"><a href="#">Фруктовый лед</a></li>
+                  <li class="submenu__item"><a href="#">Мелорин</a></li>
                 </ul>
               </li>
               <li class="site-menu-item"><a href="#">Доставка и оплата</a></li>
@@ -36,18 +36,18 @@
           <div class="user-block">
             <ul class="user-menu">
               <li>
-                <a class="visually-hidden" href="#">Поиск</a>
+                <button class="visually-hidden">Поиск по сайту</button>
                 <div class="search popup">
                   <form action="#echo" method="get">
                     <label>
-                      <input id="search-field" type="search" name="search-field" placeholder="Что ищем?"><span>Что ищем?</span>
+                      <input type="search" name="search-field" placeholder="Что ищем?"><span>Что ищем?</span>
                     </label>
-                    <button type="submit">Найти</button>
+                    <button class="visually-hidden" type="submit">Найти</button>
                   </form>
                 </div>
               </li>
               <li>
-                <a href="#">Вход</a>
+                <a href="#login.html">Вход</a>
                 <div class="login-field popup">
                   <form action="echo" method="post">
                     <p>
@@ -55,23 +55,26 @@
                       <label for="email">Эл. почта</label>
                     </p>
                     <p>
-                      <label for="password">Пароль</label>
                       <input id="password" type="password" name="password" placeholder="Пароль">
+                      <label for="password">Пароль</label>
                     </p>
                     <button type="submit" class="btn">Войти</button>
-                    <div class="help-area">
+                    <div class="registration-recovery">
                       <a href="#">Забыли пароль?</a>
                       <a href="#">Новая регистрация</a>
                     </div>
                   </form>
                 </div>
               </li>
-              <li class="cart--empty"><a href="#">Пусто</a></li>
+              <li><a class="cart--empty" href="#cart.html">Пусто</a></li>
             </ul>
           </div>
-          <p>С 10 до 20, ежедневно
-            <a href="tel:88124502525">8 812 450 25 25</a>
-          </p>
+          <div class="working-hours">
+            <h2 class="visually-hidden">Время работы магазина</h2>
+            <p>С 10 до 20, ежедневно
+              <a href="tel:88124502525">8 812 450 25 25</a>
+            </p>
+          </div>
         </header>
         <div class="slider">
           <h2 class="visually-hidden">Промо-акции</h2>
@@ -112,6 +115,7 @@
           <section class="popular">
             <h2 class="visually-hidden">Хиты продаж</h2>
             <article class="popular-item">
+              <h3 class="visually-hidden">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
               <a href="#"><img src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
               <div class="popular-item__price">
                 <b>310 &#8381;</b><span> /кг</span>
@@ -120,6 +124,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
+              <h3 class="visually-hidden">Сливочно-кофейное с кусочками шоколада</h3>
               <a href="#"><img src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
               <div class="popular-item__price">
                 <b>380 &#8381;</b><span> /кг</span>
@@ -128,6 +133,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
+              <h3 class="visually-hidden">Сливочно-клубничное с присыпкой из белого шоколада</h3>
               <a href="#"><img src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
               <div class="popular-item__price">
                 <b>355 &#8381;</b><span> /кг</span>
@@ -136,6 +142,7 @@
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
+              <h3 class="visually-hidden">Сливочное крем-брюле с карамельной подливкой</h3>
               <a href="#"><img src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
               <div class="popular-item__price">
                 <b>415 &#8381;</b><span> /кг</span>
@@ -156,13 +163,14 @@
           </section>
 
           <section class="widgets">
+            <h2 class="visually-hidden">Наши виджеты</h2>
             <article class="blog">
-              <h2>Новое в нашем блоге</h2>
+              <h3>Новое в нашем блоге</h3>
               <p><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
             </article>
 
             <section class="subscribe">
-              <h2 class="visually-hidden">Подпишитесь на нас</h2>
+              <h3 class="visually-hidden">Подпишитесь на нас</h3>
               <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <div class="subscribe-field">
                 <form action="echo" method="post">
@@ -180,10 +188,12 @@
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
         <div class="map">
+          <h3 class="visually-hidden">Мы на карте</h3>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479853502798" width="960" height="559" style="border:0" allowfullscreen></iframe>
         </div>
         <div class="content-wrapper">
           <div class="feedback">
+            <h3 class="visually-hidden">Наш адрес</h3>
             <p>Адрес главного офиса и офлайн магазина: <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong></p>
             <p>Для заказов по телефону: <a href="tel:88124502525">8 812 450 25 25</a> (с 10 до 20 ежедневно)</p>
             <a class="btn" href="write-us.html">Форма обратной связи</a>
@@ -202,18 +212,20 @@
               <li class="vkontakte"><a href="#">Наш Вконтакте</a></li>
             </ul>
           </section>
-          <nav class="footer-navigation">
-            <ul class="footer-menu">
+          <section class="supplementary">
+            <h2 class="visually-hidden">Дополнительная информация о нас</h2>
+            <ul class="supplementary__list">
               <li><a href="#">Для поставщиков</a></li>
               <li><a href="#">О производстве</a></li>
               <li><a href="#">Наши документы</a></li>
               <li><a href="#">Экологические стандарты</a></li>
             </ul>
-          </nav>
-          <div class="copyright">
+          </section>
+          <section class="copyright">
+            <h2 class="visually-hidden">Авторские права</h2>
             <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="39" alt="Сделано в HTML Academy"></a>
             <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &#169; 2017</p>
-          </div>
+          </section>
         </footer>
       </div>
       <div class="modal-feedback">
