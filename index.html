@@ -3,6 +3,8 @@
  	<head>
     <meta charset="utf-8">
     <title>HTML Academy: главная страница магазина Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -21,44 +23,43 @@
             <ul class="site-menu">
               <li class="site-menu__item">
                 <a href="#">Каталог</a>
-                <ul class="submenu">
-                  <li class="submenu__item"><a href="#new">Новинки</a></li>
+                <ul class="submenu popup">
+                  <li class="submenu__item submenu__item--title"><a href="#s1">Новинки</a></li>
                   <li class="submenu__item"><a href="catalog.html">Сливочное</a></li>
-                  <li class="submenu__item"><a href="#">Щербеты</a></li>
-                  <li class="submenu__item"><a href="#">Фруктовый лед</a></li>
-                  <li class="submenu__item"><a href="#">Мелорин</a></li>
+                  <li class="submenu__item"><a href="#s2">Щербеты</a></li>
+                  <li class="submenu__item"><a href="#s3">Фруктовый лед</a></li>
+                  <li class="submenu__item"><a href="#s4">Мелорин</a></li>
                 </ul>
               </li>
-              <li class="site-menu-item"><a href="#">Доставка и оплата</a></li>
-              <li class="site-menu-item"><a href="#">О компании</a></li>
+              <li class="site-menu__item"><a href="#">Доставка и оплата</a></li>
+              <li class="site-menu__item"><a href="#">О компании</a></li>
             </ul>
           </nav>
           <div class="user-block">
             <ul class="user-menu">
-              <li>
+              <li class="user-menu__item">
                 <button class="visually-hidden">Поиск по сайту</button>
-                <div class="search popup">
+                <div class="search-field popup">
                   <form action="#echo" method="get">
-                    <label>
-                      <input type="search" name="search-field" placeholder="Что ищем?"><span>Что ищем?</span>
-                    </label>
+                    <input id="search" type="search" name="search-field">
+                    <label for="search">Что ищем?</label>
                     <button class="visually-hidden" type="submit">Найти</button>
                   </form>
                 </div>
               </li>
-              <li>
-                <a href="#login.html">Вход</a>
+              <li class="user-menu__item">
+                <a class="login" href="#login.html">Вход</a>
                 <div class="login-field popup">
                   <form action="echo" method="post">
                     <p>
-                      <input id="email" type="email" name="email" placeholder="Электронная почта">
-                      <label for="email">Эл. почта</label>
+                      <input id="email" type="email" name="email">
+                      <label for="email">Электронная почта</label>
                     </p>
                     <p>
-                      <input id="password" type="password" name="password" placeholder="Пароль">
+                      <input id="password" type="password" name="password">
                       <label for="password">Пароль</label>
                     </p>
-                    <button type="submit" class="btn">Войти</button>
+                    <button class="btn" type="submit">Войти</button>
                     <div class="registration-recovery">
                       <a href="#">Забыли пароль?</a>
                       <a href="#">Новая регистрация</a>
@@ -66,7 +67,9 @@
                   </form>
                 </div>
               </li>
-              <li><a class="cart--empty" href="#cart.html">Пусто</a></li>
+              <li class="user-menu__item">
+                <a class="cart-empty" href="#cart.html">Пусто</a>
+              </li>
             </ul>
           </div>
           <div class="working-hours">
@@ -80,15 +83,15 @@
           <h2 class="visually-hidden">Промо-акции</h2>
           <div class="slide slide-1">
             <h3 class="slide__title">Крем-брюле и пломбир с малиновым джемом</h3>
-            <a href="#" class="btn">Давайте оба</a>
+            <a class="btn" href="#">Давайте оба</a>
           </div>
           <div class="slide slide-2">
             <h3 class="slide__title">Шоколадный пломбир и лимонный сорбет</h3>
-            <a href="#" class="btn">Давайте оба</a>
+            <a class="btn" href="#">Давайте оба</a>
           </div>
           <div class="slide slide-3">
             <h3 class="slide__title">Пломбир с помадкой и клубничный щербет</h3>
-            <a href="#" class="btn">Давайте оба</a>
+            <a class="btn" href="#">Давайте оба</a>
           </div>
           <div class="slider-controls">
             <label for="btn-1">Слайд 1</label>
@@ -103,12 +106,12 @@
             <div class="stock stock-1">
               <h3 class="stock__title">Малинка даром!</h3>
               <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-              <a href="#">Хочу варенье!</a>
+              <a class="btn" href="#">Хочу варенье!</a>
             </div>
             <div class="stock stock-2">
               <h3 class="stock__title">Шоколадки даром!</h3>
               <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-              <a href="#">Хочу шоколадки!</a>
+              <a class="btn" href="#">Хочу шоколадки!</a>
             </div>
           </section>
 
@@ -116,44 +119,52 @@
             <h2 class="visually-hidden">Хиты продаж</h2>
             <article class="popular-item">
               <h3 class="visually-hidden">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+              <svg class="hit" xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61"><circle fill="#FFF" cx="30.5" cy="30.5" r="30.5"/><g fill="#231F20"><path d="M19.985 18.27c-.915 2.683-1.718 5.384-2.472 8.094-.543-2.863-.921-5.756-.958-8.715-.005-.431-1.939-.11-1.932.518.052 4.243.8 8.354 1.747 12.432-1.196 4.58-2.311 9.18-3.579 13.771-.109.394 1.771.138 1.904-.344.902-3.265 1.726-6.535 2.556-9.8.805 3.204 1.644 6.407 2.273 9.657.098.508 2.041.045 1.932-.518-.864-4.462-2.12-8.836-3.146-13.247 1.068-4.086 2.202-8.157 3.578-12.191.124-.361-1.737-.145-1.903.343zM34.395 18.798c.049-1.047-1.919-.794-1.963.128-.004.08-.004.159-.008.238-.039.065-.084.128-.101.204-1.004 4.463-2.611 8.729-4.056 13.06-.644 1.93-1.139 3.898-1.666 5.856-.139-6.623-.135-13.237-.165-19.871-.005-1.042-1.965-.769-1.961.134.037 8.337.018 16.641.303 24.971a.644.644 0 0 0-.034.301l.064.445c.123.856 1.959.48 1.944-.317.005-.011.016-.018.021-.029 1.636-4.171 2.478-8.591 3.894-12.838.521-1.558 1.048-3.108 1.561-4.662-.071 5.987.058 11.969.211 17.961.026 1.012 1.58.771 1.91.065l.056-.119c.112-.239.088-.423-.015-.558-.211-8.333-.389-16.635.005-24.969zM47.32 17.66c-3.158.38-6.312.227-9.478.048-.491-.028-2.24.851-1.221.908 1.093.062 2.182.109 3.271.145-.093.081-.161.167-.157.265.295 8.408-1.054 17.239.191 25.564.063.424 2.01.005 1.932-.518-1.229-8.229.069-16.951-.185-25.27 1.776.012 3.551-.052 5.33-.266.857-.102 1.669-1.039.317-.876z"/></g>
+              </svg>
               <a href="#"><img src="img/ice-cream-1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"></a>
               <div class="popular-item__price">
                 <b>310 &#8381;</b><span> /кг</span>
               </div>
-              <p class="popular-item__title"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
+              <a class="popular-item__title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
               <h3 class="visually-hidden">Сливочно-кофейное с кусочками шоколада</h3>
+              <svg class="hit" xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61"><circle fill="#FFF" cx="30.5" cy="30.5" r="30.5"/><g fill="#231F20"><path d="M19.985 18.27c-.915 2.683-1.718 5.384-2.472 8.094-.543-2.863-.921-5.756-.958-8.715-.005-.431-1.939-.11-1.932.518.052 4.243.8 8.354 1.747 12.432-1.196 4.58-2.311 9.18-3.579 13.771-.109.394 1.771.138 1.904-.344.902-3.265 1.726-6.535 2.556-9.8.805 3.204 1.644 6.407 2.273 9.657.098.508 2.041.045 1.932-.518-.864-4.462-2.12-8.836-3.146-13.247 1.068-4.086 2.202-8.157 3.578-12.191.124-.361-1.737-.145-1.903.343zM34.395 18.798c.049-1.047-1.919-.794-1.963.128-.004.08-.004.159-.008.238-.039.065-.084.128-.101.204-1.004 4.463-2.611 8.729-4.056 13.06-.644 1.93-1.139 3.898-1.666 5.856-.139-6.623-.135-13.237-.165-19.871-.005-1.042-1.965-.769-1.961.134.037 8.337.018 16.641.303 24.971a.644.644 0 0 0-.034.301l.064.445c.123.856 1.959.48 1.944-.317.005-.011.016-.018.021-.029 1.636-4.171 2.478-8.591 3.894-12.838.521-1.558 1.048-3.108 1.561-4.662-.071 5.987.058 11.969.211 17.961.026 1.012 1.58.771 1.91.065l.056-.119c.112-.239.088-.423-.015-.558-.211-8.333-.389-16.635.005-24.969zM47.32 17.66c-3.158.38-6.312.227-9.478.048-.491-.028-2.24.851-1.221.908 1.093.062 2.182.109 3.271.145-.093.081-.161.167-.157.265.295 8.408-1.054 17.239.191 25.564.063.424 2.01.005 1.932-.518-1.229-8.229.069-16.951-.185-25.27 1.776.012 3.551-.052 5.33-.266.857-.102 1.669-1.039.317-.876z"/></g>
+              </svg>
               <a href="#"><img src="img/ice-cream-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада"></a>
               <div class="popular-item__price">
                 <b>380 &#8381;</b><span> /кг</span>
               </div>
-              <p class="popular-item__title"><a href="#">Сливочно-кофейное с кусочками шоколада</a></p>
+              <a class="popular-item__title" href="#">Сливочно-кофейное с кусочками шоколада</a>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
               <h3 class="visually-hidden">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+              <svg class="hit" xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61"><circle fill="#FFF" cx="30.5" cy="30.5" r="30.5"/><g fill="#231F20"><path d="M19.985 18.27c-.915 2.683-1.718 5.384-2.472 8.094-.543-2.863-.921-5.756-.958-8.715-.005-.431-1.939-.11-1.932.518.052 4.243.8 8.354 1.747 12.432-1.196 4.58-2.311 9.18-3.579 13.771-.109.394 1.771.138 1.904-.344.902-3.265 1.726-6.535 2.556-9.8.805 3.204 1.644 6.407 2.273 9.657.098.508 2.041.045 1.932-.518-.864-4.462-2.12-8.836-3.146-13.247 1.068-4.086 2.202-8.157 3.578-12.191.124-.361-1.737-.145-1.903.343zM34.395 18.798c.049-1.047-1.919-.794-1.963.128-.004.08-.004.159-.008.238-.039.065-.084.128-.101.204-1.004 4.463-2.611 8.729-4.056 13.06-.644 1.93-1.139 3.898-1.666 5.856-.139-6.623-.135-13.237-.165-19.871-.005-1.042-1.965-.769-1.961.134.037 8.337.018 16.641.303 24.971a.644.644 0 0 0-.034.301l.064.445c.123.856 1.959.48 1.944-.317.005-.011.016-.018.021-.029 1.636-4.171 2.478-8.591 3.894-12.838.521-1.558 1.048-3.108 1.561-4.662-.071 5.987.058 11.969.211 17.961.026 1.012 1.58.771 1.91.065l.056-.119c.112-.239.088-.423-.015-.558-.211-8.333-.389-16.635.005-24.969zM47.32 17.66c-3.158.38-6.312.227-9.478.048-.491-.028-2.24.851-1.221.908 1.093.062 2.182.109 3.271.145-.093.081-.161.167-.157.265.295 8.408-1.054 17.239.191 25.564.063.424 2.01.005 1.932-.518-1.229-8.229.069-16.951-.185-25.27 1.776.012 3.551-.052 5.33-.266.857-.102 1.669-1.039.317-.876z"/></g>
+              </svg>
               <a href="#"><img src="img/ice-cream-3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада"></a>
               <div class="popular-item__price">
                 <b>355 &#8381;</b><span> /кг</span>
               </div>
-              <p class="popular-item__title"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
+              <a class="popular-item__title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
               <h3 class="visually-hidden">Сливочное крем-брюле с карамельной подливкой</h3>
+              <svg class="hit" xmlns="http://www.w3.org/2000/svg" width="61" height="61" viewBox="0 0 61 61"><circle fill="#FFF" cx="30.5" cy="30.5" r="30.5"/><g fill="#231F20"><path d="M19.985 18.27c-.915 2.683-1.718 5.384-2.472 8.094-.543-2.863-.921-5.756-.958-8.715-.005-.431-1.939-.11-1.932.518.052 4.243.8 8.354 1.747 12.432-1.196 4.58-2.311 9.18-3.579 13.771-.109.394 1.771.138 1.904-.344.902-3.265 1.726-6.535 2.556-9.8.805 3.204 1.644 6.407 2.273 9.657.098.508 2.041.045 1.932-.518-.864-4.462-2.12-8.836-3.146-13.247 1.068-4.086 2.202-8.157 3.578-12.191.124-.361-1.737-.145-1.903.343zM34.395 18.798c.049-1.047-1.919-.794-1.963.128-.004.08-.004.159-.008.238-.039.065-.084.128-.101.204-1.004 4.463-2.611 8.729-4.056 13.06-.644 1.93-1.139 3.898-1.666 5.856-.139-6.623-.135-13.237-.165-19.871-.005-1.042-1.965-.769-1.961.134.037 8.337.018 16.641.303 24.971a.644.644 0 0 0-.034.301l.064.445c.123.856 1.959.48 1.944-.317.005-.011.016-.018.021-.029 1.636-4.171 2.478-8.591 3.894-12.838.521-1.558 1.048-3.108 1.561-4.662-.071 5.987.058 11.969.211 17.961.026 1.012 1.58.771 1.91.065l.056-.119c.112-.239.088-.423-.015-.558-.211-8.333-.389-16.635.005-24.969zM47.32 17.66c-3.158.38-6.312.227-9.478.048-.491-.028-2.24.851-1.221.908 1.093.062 2.182.109 3.271.145-.093.081-.161.167-.157.265.295 8.408-1.054 17.239.191 25.564.063.424 2.01.005 1.932-.518-1.229-8.229.069-16.951-.185-25.27 1.776.012 3.551-.052 5.33-.266.857-.102 1.669-1.039.317-.876z"/></g>
+              </svg>
               <a href="#"><img src="img/ice-cream-4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой"></a>
               <div class="popular-item__price">
                 <b>415 &#8381;</b><span> /кг</span>
               </div>
-              <p class="popular-item__title"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></p>
+              <a class="popular-item__title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
           </section>
 
           <section class="description">
-            <h2>Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+            <h2 class="description__title">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
             <ul class="description-list">
               <li class="description-list__item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
               <li class="description-list__item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
@@ -165,18 +176,17 @@
           <section class="widgets">
             <h2 class="visually-hidden">Наши виджеты</h2>
             <article class="blog">
-              <h3>Новое в нашем блоге</h3>
-              <p><a href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
+              <h3 class="blog__title">Новое в нашем блоге</h3>
+              <p><a class="lead" href="#">10 способов сервировки фруктовых щербетов к столу</a></p>
             </article>
 
             <section class="subscribe">
               <h3 class="visually-hidden">Подпишитесь на нас</h3>
-              <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <div class="subscribe-field">
+                <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
                 <form action="echo" method="post">
-                  <label>
-                    <input type="email" name="email" placeholder="Электронная почта"><span>Электронная почта</span>
-                  </label>
+                    <input id="email-field" type="email" name="email">
+                    <label for="email-field">Электронная почта</label>
                   <button class="btn" type="submit">Отправить</button>
                 </form>
               </div>
@@ -195,7 +205,7 @@
           <div class="feedback">
             <h3 class="visually-hidden">Наш адрес</h3>
             <p>Адрес главного офиса и офлайн магазина: <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong></p>
-            <p>Для заказов по телефону: <a href="tel:88124502525">8 812 450 25 25</a> (с 10 до 20 ежедневно)</p>
+            <p>Для заказов по телефону: <a class="phone" href="tel:88124502525">8 812 450 25 25</a> <span>(с 10 до 20 ежедневно)</span></p>
             <a class="btn" href="write-us.html">Форма обратной связи</a>
           </div>
         </div>
@@ -205,20 +215,20 @@
         <footer class="main-footer">
           <section class="social-links">
             <h2 class="visually-hidden">Мы в социальных сетях</h2>
-            <ul class="social-links-list">
-              <li class="twitter"><a href="#">Наш Твитер</a></li>
-              <li class="instagram"><a href="#">Наш Инстаграм</a></li>
-              <li class="facebook"><a href="#">Наш Фейсбук</a></li>
-              <li class="vkontakte"><a href="#">Наш Вконтакте</a></li>
+            <ul class="social-links__list">
+              <li><a class="tw" href="#"><span class="visually-hidden">Наш Твитер</span></a></li>
+              <li><a class="inst" href="#"><span class="visually-hidden">Наш Инстаграм</span></a></li>
+              <li><a class="fb" href="#"><span class="visually-hidden">Наш Фейсбук</span></a></li>
+              <li><a class="vk" href="#"><span class="visually-hidden">Наш Вконтакте</span></a></li>
             </ul>
           </section>
-          <section class="supplementary">
+          <section class="optional">
             <h2 class="visually-hidden">Дополнительная информация о нас</h2>
-            <ul class="supplementary__list">
-              <li><a href="#">Для поставщиков</a></li>
-              <li><a href="#">О производстве</a></li>
-              <li><a href="#">Наши документы</a></li>
-              <li><a href="#">Экологические стандарты</a></li>
+            <ul class="optional__list">
+              <li class="optional__item optional__item--like"><a href="#">Для поставщиков</a></li>
+              <li class="optional__item"><a href="#">О производстве</a></li>
+              <li class="optional__item"><a href="#">Наши документы</a></li>
+              <li class="optional__item"><a href="#">Экологические стандарты</a></li>
             </ul>
           </section>
           <section class="copyright">
@@ -228,20 +238,21 @@
           </section>
         </footer>
       </div>
-      <div class="modal-feedback">
-        <strong>Мы обязательно вам ответим!</strong>
-        <button class="modal-feedback--close" type="button" title="Закрыть">Закрыть</button>
+      <div class="modal-feedback popup">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <strong class="modal-feedback__title">Мы обязательно вам ответим!</strong>
+        <button class="modal-feedback__close" type="button" title="Закрыть">Закрыть</button>
         <form action="#echo" method="post">
           <p>
-            <input id="user-name" type="text" name="name" placeholder="Как вас зовут?">
+            <input id="user-name" type="text" name="name">
             <label for="user-name">Как вас зовут?</label>
           </p>
           <p>
-            <input id="user-email" type="email" name="email" placeholder="Ваша почта для ответа?">
+            <input id="user-email" type="email" name="email">
             <label for="user-email">Ваша почта для ответа?</label>
           </p>
           <p>
-            <textarea id="user-message" name="message" placeholder="Напишите что-нубудь..."></textarea>
+            <textarea id="user-message" name="message"></textarea>
             <label for="user-message">Напишите что-нибудь...</label>
           </p>
           <button class="btn" type="submit">Отправить</button>
