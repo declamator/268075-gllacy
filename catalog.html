@@ -5,7 +5,7 @@
     <title>HTML Academy: каталог мороженого магазина Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="content-wrapper">
@@ -16,7 +16,7 @@
         <nav class="main-navigation">
           <h2 class="visually-hidden">Главная навигация страницы</h2>
           <ul class="site-menu">
-            <li class="site-menu__item">
+            <li class="site-menu__item current">
               <a class="current" href="catalog.html">Каталог</a>
               <ul class="submenu popup">
                 <li class="submenu__item submenu__item--title"><a href="#s1">Новинки</a></li>
@@ -36,7 +36,7 @@
               <a class="search-link" href="#">Поиск по сайту</a>
               <div class="search-field popup">
                 <form action="#echo" method="get">
-                  <input id="search" type="search" name="search-field">
+                  <input id="search" class="tip" type="search" name="search-field">
                   <label for="search">Что ищем?</label>
                   <button class="visually-hidden" type="submit">Найти</button>
                 </form>
@@ -47,11 +47,11 @@
               <div class="login-field popup">
                 <form action="echo" method="post">
                   <p class="index-column">
-                    <input id="email" type="email" name="email">
+                    <input id="email" class="tip" type="email" name="email">
                     <label for="email">Электронная почта</label>
                   </p>
                   <p class="index-column">
-                    <input id="password" type="password" name="password">
+                    <input id="password" class="tip" type="password" name="password">
                     <label class="password-lb" for="password">Пароль</label>
                   </p>
                   <button class="btn" type="submit">Войти</button>
@@ -70,16 +70,16 @@
                   <table>
                     <tr class="cart__item">
                       <td><button class="remove" type="button" title="Удалить из корзины"><span class="visually-hidden">Удалить</span></button></td>
-                      <td class="cart-item__icon"><img src="img/ice-cream-small-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-                      <td class="cart-item__title">Пломбир с апельсиновым джемом</td>
-                      <td><span class="cart-item__weight">1,5</span> кг &#xD7; <span class="cart-item__price">200 руб.</span></td>
+                      <td class="item__icon"><img src="img/ice-cream-small-1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                      <td class="item__title">Пломбир с апельсиновым джемом</td>
+                      <td><span class="item__weight">1,5</span> кг &#xD7; <span class="item__price">200 руб.</span></td>
                       <td class="total-price"><span>300</span> руб.</td>
                     </tr>
                     <tr class="cart__item">
                       <td><button class="remove" type="button" title="Удалить из корзины"><span class="visually-hidden">Удалить</span></button></td>
-                      <td class="cart-item_icon"><img src="img/ice-cream-small-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-                      <td class="cart-item__title">Клубничный пломбир с присыпкой из белого шоколада</td>
-                      <td><span class="cart-item__weight">1,5</span> кг &#xD7; <span class="cart-item__price">300 руб.</span></td>
+                      <td class="item_icon"><img src="img/ice-cream-small-3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
+                      <td class="item__title">Клубничный пломбир с присыпкой из белого шоколада</td>
+                      <td><span class="item__weight">1,5</span> кг &#xD7; <span class="item__price">300 руб.</span></td>
                       <td class="total-price"><span>450</span> руб.</td>
                     </tr>
                   </table>
@@ -102,7 +102,7 @@
         <ol class="breadcrumbs__list">
           <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
           <li class="breadcrumbs__item"><a href="#">Каталог</a></li>
-          <li class="breadcrumbs__item"><a class="active">Сливочное</a></li>
+          <li class="breadcrumbs__item"><a class="current">Сливочное</a></li>
         </ol>
       </div>
 
@@ -132,37 +132,37 @@
               <fieldset class="fat-range">
                 <legend>Жирность:</legend>
                 <div class="inner-wrapper">
-                  <input id="fat-0" type="radio" name="fat-value" value="0">
+                  <input id="fat-0" class="tip-fat" type="radio" name="fat-value" value="0">
                   <label for="fat-0">0%</label>
 
-                  <input id="fat-10" type="radio" name="fat-value" value="10" checked>
+                  <input id="fat-10" class="tip-fat" type="radio" name="fat-value" value="10" checked>
                   <label for="fat-10">до 10%</label>
 
-                  <input id="fat-30" type="radio" name="fat-value" value="below_30">
+                  <input id="fat-30" class="tip-fat" type="radio" name="fat-value" value="below_30">
                   <label for="fat-30">до 30%</label>
 
-                  <input id="fat-over" type="radio" name="fat-value" value="higher_30">
+                  <input id="fat-over" class="tip-fat" type="radio" name="fat-value" value="higher_30">
                   <label for="fat-over">выше 30%</label>
                 </div>
               </fieldset>
               <fieldset class="filler-range">
                 <legend>Наполнители:</legend>
                 <div class="inner-wrapper">
-                  <input id="chocolate" type="checkbox" name="filler-1" checked>
+                  <input id="chocolate" class="tip-filler" type="checkbox" name="filler-1" checked>
                   <label for="chocolate">шоколадные</label>
 
-                  <input id="sugar" type="checkbox" name="filler-2" checked>
+                  <input id="sugar" class="tip-filler" type="checkbox" name="filler-2" checked>
                   <label for="sugar">сахарные присыпки</label>
 
-                  <input id="fruit" type="checkbox" name="filler-3">
+                  <input id="fruit" class="tip-filler" type="checkbox" name="filler-3">
                   <label for="fruit">фрукты</label>
 
 
-                  <input id="syrop" type="checkbox" name="filler-4">
+                  <input id="syrop" class="tip-filler" type="checkbox" name="filler-4">
                   <label for="syrop">сиропы</label>
 
 
-                  <input id="jam" type="checkbox" name="filler-5">
+                  <input id="jam" class="tip-filler" type="checkbox" name="filler-5">
                   <label for="jam">джемы</label>
                 </div>
               </fieldset>
@@ -177,7 +177,9 @@
               <div class="popular-item__price">
                 <b>310</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -186,7 +188,9 @@
               <div class="popular-item__price">
                 <b>380</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочно-кофейное с кусочками шоколада</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -195,7 +199,9 @@
               <div class="popular-item__price">
                 <b>355</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -204,7 +210,9 @@
               <div class="popular-item__price">
                 <b>415</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -213,7 +221,9 @@
               <div class="popular-item__price">
                 <b>325</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочное с брусничным джемом</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочное с брусничным джемом</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -222,7 +232,9 @@
               <div class="popular-item__price">
                 <b>410</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочно-черничное с цельными ягодами черники</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочно-черничное с цельными ягодами черники</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -231,7 +243,9 @@
               <div class="popular-item__price">
                 <b>375</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочно-лимонное с карамельной присыпкой</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочно-лимонное с карамельной присыпкой</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -240,7 +254,9 @@
               <div class="popular-item__price">
                 <b>320</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочное с шоколадной стружкой</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочное с шоколадной стружкой</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -249,7 +265,9 @@
               <div class="popular-item__price">
                 <b>440</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочно-ванильное с кусочками шоколада</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочно-ванильное с кусочками шоколада</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -258,7 +276,9 @@
               <div class="popular-item__price">
                 <b>435</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочноe с ментоловым сиропом</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочноe с ментоловым сиропом</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -267,7 +287,9 @@
               <div class="popular-item__price">
                 <b>355</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочное с кусочками черного шоколада</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочное с кусочками черного шоколада</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -276,7 +298,9 @@
               <div class="popular-item__price">
                 <b>420</b><span>/кг</span>
               </div>
-              <a class="popular-item__title" href="#">Сливочное с мятным сиропом</a>
+              <div class="popular-item__title">
+                <a href="#">Сливочное с мятным сиропом</a>
+              </div>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
           </section>
@@ -305,7 +329,7 @@
         <section class="optional">
           <h2 class="visually-hidden">Дополнительная информация о нас</h2>
           <ul class="optional__list">
-            <li class="optional__item"><a class="like" href="#">Для поставщиков</a></li>
+            <li class="optional__item optional__item--like"><a href="#">Для поставщиков</a></li>
             <li class="optional__item"><a href="#">О производстве</a></li>
           </ul>
           <ul class="optional__list">
