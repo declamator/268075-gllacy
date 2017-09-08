@@ -987,8 +987,13 @@ input[id="btn-3"]:checked ~ .page-wrapper {
   font-weight: 400;
 }
 
+.feedback .address {
+  padding-right: 100px;
+}
+
 .feedback strong {
   display: block;
+  margin-right: -100px;
   margin-bottom: 18px;
   font-size: 18px;
   line-height: 24px;
@@ -1539,9 +1544,7 @@ select::-ms-expand {
   opacity: 0.8;
 }
 
-.tip-fat:checked + label:hover::after,
-.tip-filler:checked + label:hover::after,
-.catalog-filter label:hover::before {
+.tip-fat:checked + label:hover::after {
   opacity: 1;
 }
 
@@ -1569,9 +1572,11 @@ select::-ms-expand {
   opacity: 0.8;
 }
 
+.fat-range label:hover::before {
+  opacity: 1;
+}
 
-.tip-fat:disabled + label,
-.tip-filler:disabled + label::before {
+.tip-fat:disabled + label {
   opacity: 0.4;
   cursor: default;
 }
@@ -1605,45 +1610,32 @@ select::-ms-expand {
 
 .filler-range label::before {
   position: absolute;
-  left: 0;
-  top: 50%;
+  top: -2px;
+  left: 1px;
   content: "";
   display: block;
-  width: 17px;
-  height: 16px;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  background-color: transparent;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
   opacity: 0.8;
 }
 
-.tip-filler:checked + label::after {
-  position: absolute;
-  left: 5px;
-  bottom: 8px;
-  content: "";
-  display: block;
-  width: 15px;
-  height: 7px;
-  border-left: 3px solid #e6ebe9;
-  border-bottom: 3px solid #e6ebe9;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-box-shadow:
-    0 2px 0 #a8bab0,
-    inset 0 -2px 0 #a8bab0;
-          box-shadow:
-    0 2px 0 #a8bab0,
-    inset 0 -2px 0 #a8bab0;
+.filler-range label:hover::before {
+  opacity: 1;
 }
 
-.tip-filler:checked + label:hover::after,
-.tip-filler:checked + label:focus::after {
-  border-color: #ffffff;
+.tip-filler:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+.tip-filler:disabled + label {
+  cursor: default;
+}
+
+.tip-filler:disabled + label::before {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .filter-btn {

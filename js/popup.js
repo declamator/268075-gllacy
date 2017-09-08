@@ -6,23 +6,25 @@ var form = popup.querySelector("form");
 var username = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 
-link.addEventListener("click", function() {
+link.addEventListener("click", function(event) {
   event.preventDefault();
   overlay.classList.add("popup-show");
   popup.classList.add("modal-show");
   username.focus();
 });
 
-close.addEventListener("click", function() {
+close.addEventListener("click", function(event) {
   event.preventDefault();
   overlay.classList.remove("popup-show");
   popup.classList.remove("modal-show");
 });
 
-window.addEventListener("keydown", function() {
-  if (popup.classList.contains("modal-show")) {
-    popup.classList.remove("modal-show");
-    overlay.classList.remove("popup-show");
+window.addEventListener("keydown", function(event) {
+  if(event.keyCode === 27) {
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      overlay.classList.remove("popup-show");
+    }
   }
 });
 
