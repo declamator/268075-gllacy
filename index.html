@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: главная страница магазина Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -126,9 +126,9 @@
               <div class="popular-item__price">
                 <b>310</b><span>/кг</span>
               </div>
-              <div class="popular-item__title">
+              <p class="popular-item__title">
                 <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-              </div>
+              </p>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -139,9 +139,9 @@
               <div class="popular-item__price">
                 <b>380</b><span>/кг</span>
               </div>
-              <div class="popular-item__title">
+              <p class="popular-item__title">
                 <a  href="#">Сливочно-кофейное с кусочками шоколада</a>
-              </div>
+              </p>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -152,9 +152,9 @@
               <div class="popular-item__price">
                 <b>355</b><span>/кг</span>
               </div>
-              <div class="popular-item__title">
+              <p class="popular-item__title">
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-              </div>
+              </p>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
             <article class="popular-item">
@@ -165,9 +165,9 @@
               <div class="popular-item__price">
                 <b>415</b><span>/кг</span>
               </div>
-              <div class="popular-item__title">
+              <p class="popular-item__title">
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-              </div>
+              </p>
               <a class="btn" href="#">Быстрый просмотр</a>
             </article>
           </section>
@@ -206,7 +206,7 @@
           <h2 class="visually-hidden">Контактная информация</h2>
           <div class="map">
             <h3 class="visually-hidden">Мы на карте</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479853502798" width="960" height="430" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651595!2d30.320894616394252!3d59.93879418187624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1479853502798" width="1200" height="430" style="border:0" allowfullscreen></iframe>
           </div>
           <div class="feedback">
             <h3 class="visually-hidden">Наш адрес</h3>
@@ -244,14 +244,14 @@
           </section>
         </footer>
 
-        <div class="modal-feedback popup">
+        <div class="modal modal-feedback popup">
           <h2 class="visually-hidden">Форма обратной связи</h2>
           <strong class="modal-feedback__title">Мы обязательно вам ответим!</strong>
           <button class="modal-feedback__close" type="button" title="Закрыть"><span class="visually-hidden">Закрыть</span></button>
           <form action="#echo" method="post">
             <p>
               <input id="user-name" class="tip tip-modal" type="text" name="name">
-              <label for="user-name">Как вас зовут?</label>
+              <label class="class" for="user-name">Как вас зовут?</label>
             </p>
             <p>
               <input id="user-email" class="tip tip-modal" type="email" name="email">
