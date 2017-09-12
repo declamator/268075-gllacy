@@ -6,8 +6,6 @@ var form = popup.querySelector("form");
 var username = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 var button = popup.querySelector(".btn");
-var l_user = localStorage.getItem("username");
-var l_email = localStorage.getItem("email");
 
 link.addEventListener("click", function(event) {
   event.preventDefault();
@@ -44,10 +42,8 @@ overlay.addEventListener("click", function() {
 form.addEventListener("submit", function(event) {
   if (!username.value || !email.value) {
     event.preventDefault();
+    popup.classList.remove("modal-error");
+    popup.offsetWidth = popup.offsetWidth;
     popup.classList.add("modal-error");
-  }
-  else {
-    localStorage.setItem("username", username.value);
-    localStorage.setItem("email", email.value);
   }
 });

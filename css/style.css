@@ -1079,23 +1079,10 @@ input[id="btn-3"]:checked ~ .page-wrapper {
 
 .social-links a:active {
   border-color: rgba(255, 255, 255, 0.7);
-  opacity: 1;
 }
 
-.social-links .tw {
-  background-image: url("../img/tw-icon.svg");
-}
-
-.social-links .inst {
-  background-image: url("../img/inst-icon.svg");
-}
-
-.social-links .fb {
-  background-image: url("../img/fb-icon.svg");
-}
-
-.social-links .vk {
-  background-image: url("../img/vk-icon.svg");
+ .link:active .icon-bg {
+  fill: #e9e9e9;
 }
 
 .optional {
